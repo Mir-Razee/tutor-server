@@ -134,7 +134,7 @@ global.io.on("connection", (socket) => {
   // });
 });
 /** Listen on provided port, on all network interfaces. */
-server.listen(5000);
+server.listen(port);
 /** Event listener for HTTP server "listening" event. */
 server.on("listening", () => {
   console.log(`Listening on port:: http://localhost:5000/`)
