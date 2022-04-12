@@ -60,7 +60,7 @@ app.use("/room",  chatRoomRouter);
 app.use("/all", allRoutes);
 app.use("/subject", subjectRoutes);
 // process.env.CONNECTION_STRING
-port = process.env.port || 5000;
+// port = process.env.port || 5000;
 
 const start = async () => {
   try {
@@ -134,7 +134,7 @@ global.io.on("connection", (socket) => {
   // });
 });
 /** Listen on provided port, on all network interfaces. */
-server.listen(port);
+server.listen(process.env.PORT||5000);
 /** Event listener for HTTP server "listening" event. */
 server.on("listening", () => {
   console.log(`Listening on port:: http://localhost:5000/`)
